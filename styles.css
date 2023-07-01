@@ -27,14 +27,13 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1; /* Bring the container in front of the overlay */
     width: 700px;
-    max-width: 100%;
-    padding: 0 20px;
   }
   
   #time {
     font-family: "Comic Sans MS", cursive;
     font-size: 108px;
     color: white;
+    font-weight: bold;
   }
   
   #timezone,
