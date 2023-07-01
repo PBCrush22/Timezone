@@ -8,7 +8,7 @@ Check out the live demonstration of this project at [behhanyu.github.io/Timezone
 
 ## Screenshots
 ![Display Screenshot](img/display.png)
-![Modal Screenshot](img/modal_display.png)
+![Modal Screenshot](img/modal display.png)
 
 ## Technologies Used
 - [Day.js](https://day.js.org/) - A JavaScript library for manipulating dates and times.
