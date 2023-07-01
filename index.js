@@ -27,26 +27,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
     MicroModal.init();
 
-    document.getElementById('timezone').addEventListener('click', function() {
+    var timezoneElement = document.getElementById('timezone');
+    timezoneElement.style.textDecoration = 'underline';
+    timezoneElement.style.cursor = 'pointer';
+
+    timezoneElement.addEventListener('click', function() {
         MicroModal.show('modal-1');
     });
 
     // Get the necessary elements
-    var timezoneElement = document.getElementById("timezone");
-    var timeElement = document.getElementById("time");
-    var dateElement = document.getElementById("date");
-    var selectElement = document.getElementById("timezoneSelect");
+    var timeElement = document.getElementById('time');
+    var dateElement = document.getElementById('date');
+    var selectElement = document.getElementById('timezoneSelect');
 
     // Update timezone, time, and date based on the selected option
-    selectElement.addEventListener("change", function() {
+    selectElement.addEventListener('change', function() {
         var selectedOption = selectElement.value;
         selectedTimezone = selectedOption;
 
         timezoneElement.textContent = selectedOption;
-        timeElement.textContent = dayjs().tz(selectedOption).format("HH:mm:ss");
-        dateElement.textContent = dayjs().tz(selectedOption).format("dddd, MMMM D, YYYY");
+        timeElement.textContent = dayjs().tz(selectedOption).format('HH:mm:ss');
+        dateElement.textContent = dayjs().tz(selectedOption).format('dddd, MMMM D, YYYY');
 
         // Close the modal
-        MicroModal.close("modal-1");
+        MicroModal.close('modal-1');
     });  
 });
