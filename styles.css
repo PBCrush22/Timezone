@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("img/unsplash mountain.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity value as needed */
+    z-index: -1; /* Move the overlay behind the content */
+  }
+  
+  .container {
+    text-align: right;
+    z-index: 1; /* Bring the container in front of the overlay */
+  }
+  
+  #time {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 108px;
+    color: white;
+  }
+  
+  #timezone,
+  #date {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 18px;
+    color: white;
+  }
+  
