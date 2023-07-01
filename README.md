@@ -3,6 +3,9 @@
 ## Description
 This project displays the current time and allows the user to change the timezone using a dropdown modal.
 
+## Project Webpage
+Check out the live demonstration of this project at [behhanyu.github.io/Timezone](https://behhanyu.github.io/Timezone/).
+
 ## Screenshots
 ![Display Screenshot](img/display.png)
 ![Modal Screenshot](img/modal_display.png)
