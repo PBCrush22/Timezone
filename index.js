@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     dayjs.extend(dayjs_plugin_utc);
     dayjs.extend(dayjs_plugin_timezone);
 
-    MicroModal.init();
-  
     // Function to update the time and date
     function updateTimeAndDate() {
       // Get the current timezone using Day.js
@@ -23,18 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Update the time and date every second (1000 milliseconds)
     setInterval(updateTimeAndDate, 1000);
-  });
 
+    MicroModal.init();
 
-  document.getElementById('timezoneButton').addEventListener('click', function() {
-    MicroModal.show('modal-1');
-  });
-
-  document.getElementById('modal-1').addEventListener('click', function(event) {
-    if (event.target.classList.contains('modal__btn')) {
-      const selectedTimezone = document.getElementById('timezoneSelect').value;
-      document.getElementById('timezone').textContent = selectedTimezone;
-      MicroModal.close('modal-1');
-    }
-  });
-  
+    document.getElementById('timezone').addEventListener('click', function() {
+        MicroModal.show('modal-1');
+      });
+    
+});
