@@ -4,6 +4,7 @@
   <title>Timezone Viewer</title>
   <meta name="viewport" content="width=device-width, initial scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.5/dayjs.min.js" integrity="sha512-Ot7ArUEhJDU0cwoBNNnWe487kjL5wAOsIYig8llY/l0P2TUFwgsAHVmrZMHsT8NGo+HwkjTJsNErS6QqIkBxDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.5/plugin/utc.min.js" integrity="sha512-z84O912dDT9nKqvpBnl1tri5IN0j/OEgMzLN1GlkpKLMscs5ZHVu+G2CYtA6dkS0YnOGi3cODt3BOPnYc8Agjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.5/plugin/timezone.min.js" integrity="sha512-fG1tT/Wn/ZOyH6/Djm8HQBuqvztPQdK/vBgNFLx6DQVt3yYYDPN3bXnGZT4z4kAnURzGQwAnM3CspmhLJAD/5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -12,6 +13,27 @@
 <body>
   <div class="container">
     <div id="timezone"></div>
+    <div id="modal-1" aria-hidden="true">
+      <div tabindex="-1" data-micromodal-close>
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header>
+            <h2 id="modal-1-title">Select Timezone</h2>
+            <button aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <main>
+            <select id="timezoneSelect">
+              <option value="America/New_York">America/New_York</option>
+              <option value="Europe/London">Europe/London</option>
+              <!-- Add more timezone options as needed -->
+            </select>
+          </main>
+          <footer>
+            <button class="modal__btn" data-micromodal-close>Close</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    
     <div id="time"></div>
     <div id="date"></div>
   </div>
